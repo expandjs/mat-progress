@@ -1,0 +1,16 @@
+{
+  "name": "mat-progress",
+  "license": "BSD-3-Clause",
+  "version": "0.9.4",
+  "authors": [
+    "Giuliano Rullo <g.rullo@expandjs.com>",
+    "Maurizio Stefàno <m.stefano@expandjs.com>",
+    "Robert Manolea <r.manolea@expandjs.com>"
+  ],
+  "main": [
+    "mat-progress.html"
+  ],
+  "ignore": [
+    "**/.*"
+  ]
+}
