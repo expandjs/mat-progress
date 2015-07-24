@@ -7,7 +7,42 @@ The complete set of contributors may be found at https://expandjs.github.io/CONT
 -->
 
 <!--
-This element is used to display a material progress bar.
+An element used to display a [Material Design progress bar](http://www.google.com/design/spec/components/progress-activity.html#progress-activity-types-of-indicators).
+
+By default, `<mat-progress>` behaves like a standard progress bar, where you have to specify a
+`value` within the range created by `min` and `max` to display the completion percentage.
+
+```html
+<mat-progress min="0" value="50" max="200" showed></mat-progress>
+```
+
+For those cases in which the duration of the process is not known, different modes
+can be applied on `<mat-progress>` to give the right kind of feedback to the user.
+
+```html
+<mat-progress mode="indeterminate" showed></mat-progress>
+<mat-progress mode="query" showed></mat-progress>
+```
+
+For data streaming (audio/video), there's a `buffer` mode which allows you to show
+two progress values at once, for example the playback progress and the download progress.
+
+```html
+<mat-progress mode="buffer" value="33" buffer-value="66" showed></mat-progress>
+```
+
+---
+
+## Styling
+
+To change the colors of the progress bar you can either use CSS or a friendlier approach,
+using `color` for the primary color and `buffer-color` for the secondary color.
+
+All the styling API is done using [Material Design palette](http://www.google.com/design/spec/style/color.html#color-color-palette).
+
+```html
+<mat-progress color="red" buffer-color="red-100" value="50" showed>
+```
 
 @element mat-progress
 @description A custom element used to display a Material Design progress bar
@@ -16,14 +51,14 @@ This element is used to display a material progress bar.
 @homepage http://expandjs.com/elements/mat-progress
 @demo http://expandjs.com/demo/mat-progress
 
-@behavior mat-palette http://expandjs.com/elements/mat-palette
+@behavior mat-palette /bower_components/mat-palette/mat-palette.html
 
 @dependency polymer Polymer/polymer#^1.0.0
-@dependency expandjs ExpandJS/expandjs#0.9.4
+@dependency expandjs ExpandJS/expandjs#0.9.5
 @dependency iron-flex-layout PolymerElements/iron-flex-layout#^1.0.0
-@dependency mat-ripple ExpandJS/mat-ripple#0.9.4
+@dependency mat-ripple ExpandJS/mat-ripple#0.9.5
 
-@devDependency mat-demo ExpandJS/mat-demo#0.9.4
+@devDependency mat-demo ExpandJS/mat-demo#0.9.5
 -->
 
 <link rel="import" href="../polymer/polymer.html">
