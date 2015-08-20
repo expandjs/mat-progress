@@ -2,6 +2,7 @@
   "name": "mat-progress",
   "license": "BSD-3-Clause",
   "version": "0.9.6",
+  "main": "mat-progress.html",
   "description": "A custom element used to display a Material Design progress bar",
   "homepage": "http://expandjs.com/elements/mat-progress",
   "authors": [
@@ -16,9 +17,6 @@
     "html5",
     "expandjs",
     "web-components"
-  ],
-  "main": [
-    "mat-progress.html"
   ],
   "ignore": [
     "**/.*"
