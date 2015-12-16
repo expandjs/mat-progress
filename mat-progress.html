@@ -78,19 +78,15 @@ The progress bar's color can be changed accordingly to the
         <style>
             :host {
                 height: 4px;
-                -webkit-transform: scale(1, 1);
                 transform: scale(1, 1);
-                -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
                 transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
             }
 
             :host(:not([showed])) {
-                -webkit-transform: scale(1, 0) !important;
                 transform: scale(1, 0) !important;
             }
 
             :host .bar {
-                -webkit-transition: none;
                 transition: none;
             }
 
@@ -124,7 +120,6 @@ The progress bar's color can be changed accordingly to the
             /* INDETERMINATE MODE */
 
             :host([mode="indeterminate"]) .bar {
-                -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
                 transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
             }
 
@@ -137,10 +132,10 @@ The progress bar's color can be changed accordingly to the
             }
 
             @-webkit-keyframes indeterminate-aux {
-                0%   { -webkit-transform: translateX(0%) scale(0, 1);     }
-                50%  { -webkit-transform: translateX(0%) scale(0, 1);     }
-                75%  { -webkit-transform: translateX(0%) scale(0.6, 1);   }
-                100% { -webkit-transform: translateX(100%) scale(0.2, 1); }
+                0%   { transform: translateX(0%) scale(0, 1);     }
+                50%  { transform: translateX(0%) scale(0, 1);     }
+                75%  { transform: translateX(0%) scale(0.6, 1);   }
+                100% { transform: translateX(100%) scale(0.2, 1); }
             }
 
             @keyframes indeterminate-aux {
@@ -151,11 +146,11 @@ The progress bar's color can be changed accordingly to the
             }
 
             @-webkit-keyframes indeterminate-progress {
-                0%   { -webkit-transform: translateX(0%) scale(0, 1);     }
-                20%  { -webkit-transform: translateX(0%) scale(0.5, 1);   }
-                33%  { -webkit-transform: translateX(20%) scale(0.7, 1);  }
-                66%  { -webkit-transform: translateX(100%) scale(0.7, 1); }
-                100% { -webkit-transform: translateX(100%) scale(0.7, 1); }
+                0%   { transform: translateX(0%) scale(0, 1);     }
+                20%  { transform: translateX(0%) scale(0.5, 1);   }
+                33%  { transform: translateX(20%) scale(0.7, 1);  }
+                66%  { transform: translateX(100%) scale(0.7, 1); }
+                100% { transform: translateX(100%) scale(0.7, 1); }
             }
 
             @keyframes indeterminate-progress {
@@ -169,29 +164,26 @@ The progress bar's color can be changed accordingly to the
             /* QUERY MODE */
 
             :host([mode="query"]) .bar {
-                -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
                 transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
             }
 
             :host([mode="query"]) .bar.aux {
                 -webkit-animation: query-aux 2s linear 0s infinite;
                 animation: query-aux 2s linear 0s infinite;
-                -webkit-transform-origin: right;
                 transform-origin: right;
             }
 
             :host([mode="query"]) .bar.progress {
                 -webkit-animation: query-progress 2s linear 0s infinite;
                 animation: query-progress 2s linear 0s infinite;
-                -webkit-transform-origin: right;
                 transform-origin: right;
             }
 
             @-webkit-keyframes query-aux {
-                0%   { -webkit-transform: translateX(0%) scale(0, 1);      }
-                50%  { -webkit-transform: translateX(0%) scale(0, 1);      }
-                75%  { -webkit-transform: translateX(0%) scale(0.6, 1);    }
-                100% { -webkit-transform: translateX(-100%) scale(0.2, 1); }
+                0%   { transform: translateX(0%) scale(0, 1);      }
+                50%  { transform: translateX(0%) scale(0, 1);      }
+                75%  { transform: translateX(0%) scale(0.6, 1);    }
+                100% { transform: translateX(-100%) scale(0.2, 1); }
             }
 
             @keyframes query-aux {
@@ -202,11 +194,11 @@ The progress bar's color can be changed accordingly to the
             }
 
             @-webkit-keyframes query-progress {
-                0%   { -webkit-transform: translateX(0%) scale(0, 1);      }
-                20%  { -webkit-transform: translateX(0%) scale(0.5, 1);    }
-                33%  { -webkit-transform: translateX(-20%) scale(0.7, 1);  }
-                66%  { -webkit-transform: translateX(-100%) scale(0.7, 1); }
-                100% { -webkit-transform: translateX(-100%) scale(0.7, 1); }
+                0%   { transform: translateX(0%) scale(0, 1);      }
+                20%  { transform: translateX(0%) scale(0.5, 1);    }
+                33%  { transform: translateX(-20%) scale(0.7, 1);  }
+                66%  { transform: translateX(-100%) scale(0.7, 1); }
+                100% { transform: translateX(-100%) scale(0.7, 1); }
             }
 
             @keyframes query-progress {
